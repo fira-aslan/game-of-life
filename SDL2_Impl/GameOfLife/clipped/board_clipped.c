@@ -43,7 +43,7 @@ void random_board(Board *board){
   srand(time(NULL));
   for(int i = 0; i < board->height; i++){
     for(int j = 0; j < board->width; j++){
-      if(rand()%10 > 7){
+      if(rand()%10 > 6){
         board->cells[i][j] = 1;
       }
       else{

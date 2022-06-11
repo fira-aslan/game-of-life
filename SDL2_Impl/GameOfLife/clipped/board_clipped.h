@@ -24,5 +24,4 @@ int print_SDL(Board board);
 void finalize_SDL();
 
 
-
 #endif

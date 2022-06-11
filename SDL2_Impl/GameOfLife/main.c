@@ -1,8 +1,8 @@
-#include "clipped/board_clipped.h"
+#include "board_clipped.h"
 
 int main(){
-  int height = 50;
-  int width = 50;
+  int height = 60;
+  int width = 60;
   int c; bool quit = false;
   Board board;
   init_board(&board, width, height);
