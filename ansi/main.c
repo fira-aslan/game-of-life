@@ -11,12 +11,6 @@ void play(int width, int height, int option)
 			board[i][j] = (rand()%2);
 		}
 	}
-	for(int i=0; i<height;i++){
-		for(int j=0; j<width; j++){
-			printf("%d ",board[i][j]);
-		}
-		printf("\n");
-	}
 	printf("Initial configuration: \n");
 	show(board, width, height);
 	printf("\n");
