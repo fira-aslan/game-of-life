@@ -14,29 +14,39 @@
  */
 
 
-#include "board_clipped.h"
+#include "board.h"
 
 int main(){
-  int height = 60;
-  int width = 60;
-  int c; bool quit = false;
-  Board board;
-  init_board(&board, width, height);
-  random_board(&board);
-  init_SDL(width, height);
-  print_SDL(board);
-  while(!quit){
-    SDL_Event e;
-    board = new_board(board);
+  int option;
+	printf("Which version do you want to play? \n");
+	printf("Enter 1 for clipped, 2 for circular: \n");
+	scanf("%d", &option);
+  if(option==1 || option==2){
+    int height = 60;
+    int width = 60;
+    int c; bool quit = false;
+    Board board;
+    init_board(&board, width, height);
+    random_board(&board);
+    init_SDL(width, height);
     print_SDL(board);
-    print_SDL(board);
-    while(SDL_PollEvent(&e)){
-      if(e.type == SDL_QUIT){
-        quit = true;
+    while(!quit){
+      SDL_Event e;
+      board = new_board(board, option);
+      print_SDL(board);
+      print_SDL(board);
+      while(SDL_PollEvent(&e)){
+        if(e.type == SDL_QUIT){
+          quit = true;
+        }
       }
     }
+    finalize_SDL();
+    destroy_board(&board);
   }
-  finalize_SDL();
-  destroy_board(&board);
+  else{
+    printf("No such option.\n");
+  }
+  
   return 0;
 }

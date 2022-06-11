@@ -1,4 +1,4 @@
-#include "board_clipped.h"
+#include "board.h"
 
 SDL_Window* window = NULL;
 SDL_Surface* screen = NULL;
@@ -22,7 +22,7 @@ void destroy_board(Board *board){
 }
 
 
-int check_neighbours(Board board, int x, int y){
+int check_neighbours_clipped(Board board, int x, int y){
   int count=0;
   for(int i = -1; i <= 1; i++){
     for(int j = -1; j <= 1; j++){
@@ -32,6 +32,30 @@ int check_neighbours(Board board, int x, int y){
             count++;
           }
         }
+      }
+    }
+  }
+  return count;
+}
+
+int check_neighbours_circular(Board board, int x, int y){
+  int count=0;
+  for(int i = -1; i <= 1; i++){
+    for(int j = -1; j <= 1; j++){
+      int y_ = y+i;
+      int x_ = x+j;
+      if (y+i<0)
+        y_ = board.height - 1;
+      if (x+j<0)
+        x_ = board.width - 1;
+      if (y+i >= board.height)
+        y_ = 0;
+      if (x+j >= board.width)
+        x_ = 0;
+      if(board.cells[y_][x_] == 1){
+        if(!(i == 0 && j == 0)){
+          count++;
+        }     
       }
     }
   }
@@ -54,13 +78,18 @@ void random_board(Board *board){
 }
 
 
-Board new_board(Board board){
+Board new_board(Board board, int option){
   Board new;
   init_board(&new, board.width, board.height);
   for(int i = 0; i< board.height; i++){
     for(int j = 0; j < board.width; j++){
       int neighbours = 0;
-      neighbours = check_neighbours(board, j, i);
+      if(option == 1){
+        neighbours = check_neighbours_clipped(board, j, i);
+      }
+      else if(option==2){
+        neighbours = check_neighbours_circular(board, j, i);
+      }
       if(board.cells[i][j] == 1){
         if (neighbours == 2 || neighbours == 3){
           new.cells[i][j] = 1;

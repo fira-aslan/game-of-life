@@ -3,7 +3,7 @@
  ******************************************************************************************/
 
 /**
- * @file board_clipped.h
+ * @file board.h
  * @brief Header file
  * This file contains necessary function definitions for game of life implementation using SDL2 library
  */
@@ -46,16 +46,28 @@ void random_board(Board *board);
  * @param y the y coordinate of a cell
  * @return int 
  */
-int check_neighbours(Board board, int x, int y);
+int check_neighbours_clipped(Board board, int x, int y);
+
+
+/**
+ * @brief Check neighbors
+ * This function checks neighbors of each cell using the method circular
+ * @param board 
+ * @param x the x coordinate of a cell
+ * @param y the y coordinate of a cell
+ * @return int 
+ */
+int check_neighbours_circular(Board board, int x, int y);
 
 
 /**
  * @brief Generates a board after applying game rules
  * This function returns a new board after applying the rules of the game on an initial board
  * @param board 
+ * @param option
  * @return Board 
  */
-Board new_board(Board board);
+Board new_board(Board board, int option);
 
 
 /**
