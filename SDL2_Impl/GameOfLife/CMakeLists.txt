@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.0)
+project(gameSDL LANGUAGES C)
+add_executable(${PROJECT_NAME} "")
+target_sources(${PROJECT_NAME} PRIVATE main.c)
+target_link_libraries(${PROJECT_NAME} PRIVATE versions)
+add_subdirectory(versions)
+
+add_executable(tests "")
+target_sources(tests PRIVATE CUnitTests.c)
+target_link_libraries(tests PRIVATE versions cunit)
+enable_testing()
+add_test(NAME "CUnit_Tests" COMMAND tests)
