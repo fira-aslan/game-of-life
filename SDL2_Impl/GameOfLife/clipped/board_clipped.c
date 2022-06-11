@@ -9,7 +9,7 @@ void init_board(Board *board, int width, int height){
   board->width = width;
   board->cells = malloc(sizeof(int*)*board->height);
   for(int i = 0; i < board->height; i++){
-    board->cells[i] = malloc(sizeof(int*)*board->width);
+    board->cells[i] = malloc(sizeof(int)*board->width);
   }
 }
 
