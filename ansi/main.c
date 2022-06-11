@@ -1,3 +1,17 @@
+/********************************************************************************************
+ * This project was developed by Firangiz Aslanova and Humay Abbasli
+ ******************************************************************************************/
+
+/**
+ * @file main.c
+ * @author Firangiz Aslanova and Humay Abbasli
+ * @brief Main file for ansi coding
+ * @version 1.0
+ * @date 2022-06-11
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #include "board.h"
 #include "life.h"
 
