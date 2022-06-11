@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/play.dir/main.c.o  -o play  console/libconsole.a game/libgame.a 

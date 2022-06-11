@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/gameSDL.dir/main.c.o  -o gameSDL  clipped/libclipped.a game/libgame.a -lSDL2 -lSDL2main 
