@@ -1,3 +1,19 @@
+/********************************************************************************************
+ * This project was developed by Firangiz Aslanova and Humay Abbasli
+ ******************************************************************************************/
+
+/**
+ * @file main.c
+ * @author Firangiz Aslanova and Humay Abbasli
+ * @brief "This project was developed for the course Development Techniques. It is a simulation of Game of Life using ansi coding and SDL2 library."
+ * @version 1.0
+ * @date 2022-06-11
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
+
 #include "board_clipped.h"
 
 int main(){
