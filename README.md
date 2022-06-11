@@ -1,11 +1,11 @@
 # game-of-life
 Game of Life project for Development Techniques 
 
-<<<<<<< HEAD
+
 Branch development along with main
 
 # How to launch
-First of all, clone the project: git clone https://github.com/fira-aslan/game-of-life
+First of all, clone the project: git clone https://github.com/fira-aslan/game-of-life.git
 
 Then use commands below:
 ```bash
@@ -14,7 +14,4 @@ Then use commands below:
   make
   ./gameSDL
  ```
-=======
-Branch develop along with main
-first everything will be done here, and then this branch will merge with the main branch.
->>>>>>> develop
+
