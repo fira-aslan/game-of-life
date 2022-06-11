@@ -1,9 +1,0 @@
-/home/user/DevTech/Game of Life/game-of-life/ansi/CMakeFiles/rebuild_cache.dir
-/home/user/DevTech/Game of Life/game-of-life/ansi/CMakeFiles/edit_cache.dir
-/home/user/DevTech/Game of Life/game-of-life/ansi/CMakeFiles/play.dir
-/home/user/DevTech/Game of Life/game-of-life/ansi/console/CMakeFiles/rebuild_cache.dir
-/home/user/DevTech/Game of Life/game-of-life/ansi/console/CMakeFiles/edit_cache.dir
-/home/user/DevTech/Game of Life/game-of-life/ansi/console/CMakeFiles/console.dir
-/home/user/DevTech/Game of Life/game-of-life/ansi/game/CMakeFiles/rebuild_cache.dir
-/home/user/DevTech/Game of Life/game-of-life/ansi/game/CMakeFiles/edit_cache.dir
-/home/user/DevTech/Game of Life/game-of-life/ansi/game/CMakeFiles/game.dir
